@@ -50,7 +50,7 @@ app.get("/", (req, res) => {
 app.get("/api/notes", (req, res) => {
   Note.find({}).then((notes) => {
     res.json(notes);
-    mongoose.connection.close();
+    // mongoose.connection.close();
   });
 });
 
