@@ -11,6 +11,10 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static("build"));
 
+Note.find({}).then((result) => {
+  console.log(result);
+});
+
 app.get("/", (req, res) => {
   res.send("<h1>Hello Ebrima</h1>");
 });
